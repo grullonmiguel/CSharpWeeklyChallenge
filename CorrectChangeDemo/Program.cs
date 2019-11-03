@@ -1,13 +1,19 @@
-﻿using CorrectChangeDemo.Enumerations;
-using System;
-using static CorrectChangeDemo.Helpers;
+﻿using System;
+using Yomisoft.CorrectChange.Enumerations;
 
-namespace CorrectChangeDemo
+/// <summary>
+/// C# Weekly Challenges
+/// https://www.iamtimcorey.com/p/c-weekly-challenges
+/// https://www.youtube.com/watch?v=bX6PN6Cfe-k&t=54s
+/// </summary>
+namespace Yomisoft.CorrectChange
 {
     /// <summary>
-    /// Create a Console app that takes in an amount owed and an amount paid.
-    /// Have the app calculate how change a person is due.
-    /// Just worry about change under a dollar.
+    /// Create a Console application that takes in an 
+    /// amount owed and an amount paid.
+    /// 
+    /// Have the application calculate how much change 
+    /// a person is due. Just worry about change under a dollar.
     /// </summary>
     public class Program
     {

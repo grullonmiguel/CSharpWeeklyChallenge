@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6CF0333C-BA48-4121-972D-31DC72244870}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CorrectChangeDemo</RootNamespace>
-    <AssemblyName>CorrectChangeDemo</AssemblyName>
+    <RootNamespace>Yomisoft.CorrectChange</RootNamespace>
+    <AssemblyName>CorrectChange</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

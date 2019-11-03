@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CorrectChangeDemo
+namespace Yomisoft.CorrectChange
 {
     internal static class Helpers
     {
@@ -13,7 +13,7 @@ namespace CorrectChangeDemo
             Quarter = 25
         }
 
-        // IEnumerable lacks a ForEach Linq operator extension method
+        // IEnumerable lacks a ForEach LINQ operator extension method
         public static void ForEach<T>(this IEnumerable<T> sequence, Action<T> action)
         {
             foreach (T item in sequence) action(item);

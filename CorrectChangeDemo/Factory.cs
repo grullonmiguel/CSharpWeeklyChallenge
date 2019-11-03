@@ -1,7 +1,6 @@
-﻿using CorrectChangeDemo.Enumerations;
-using static CorrectChangeDemo.Helpers;
+﻿using Yomisoft.CorrectChange.Enumerations;
 
-namespace CorrectChangeDemo
+namespace Yomisoft.CorrectChange
 {
     internal class Factory
     {

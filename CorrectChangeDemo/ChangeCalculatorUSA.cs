@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using static CorrectChangeDemo.Helpers;
+using static Yomisoft.CorrectChange.Helpers;
 
-namespace CorrectChangeDemo
+namespace Yomisoft.CorrectChange
 {
     internal class ChangeCalculatorUSA : IChangeCalculator
     {

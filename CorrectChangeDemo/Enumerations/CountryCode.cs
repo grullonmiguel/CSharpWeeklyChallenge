@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CorrectChangeDemo.Enumerations
+namespace Yomisoft.CorrectChange.Enumerations
 {
     /// <summary>
     /// Represents list of country codes using a two-letter format (ISO 3166-1 alpha-2)
