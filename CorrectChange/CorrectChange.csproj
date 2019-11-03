@@ -49,6 +49,8 @@
     <Compile Include="Factory.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="IChangeCalculator.cs" />
+    <Compile Include="Interfaces\IDenomination.cs" />
+    <Compile Include="Interfaces\ITransaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
