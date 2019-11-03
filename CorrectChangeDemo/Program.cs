@@ -3,19 +3,34 @@ using static CorrectChangeDemo.Helpers;
 
 namespace CorrectChangeDemo
 {
-    internal class Program
+    /// <summary>
+    /// Create a Console app that takes in an amount owed and an amount paid.
+    /// Have the app calculate how change a person is due.
+    /// Just worry about change under a dollar.
+    /// </summary>
+    public class Program
     {
 
-        const decimal AMOUNT_OWED = .39m;
-        const decimal AMOUNT_PAID = .49m;
+        /// <summary>
+        /// Gets the amount owed by the customer
+        /// </summary>
+        private static decimal AmountOwed { get; } = .41m;
 
-        static void Main(string[] args)
+        /// <summary>
+        /// Gets the amount paid by the customer
+        /// </summary>
+        private static decimal AmountPaid { get; } = .49m;
+
+        /// <summary>
+        /// Entry point to the application
+        /// </summary>
+        private static void Main()
         {
             try
             {
-                var calculator = Factory.GetCalculator(CountryCode.USA);
+                IChangeCalculator calculator = Factory.GetCalculator(CountryCode.USA);
 
-                var results = calculator.CalculateChange(AMOUNT_OWED, AMOUNT_PAID);
+                var results = calculator.CalculateChange(AmountOwed, AmountPaid);
 
                 results.ForEach(x => Console.WriteLine(x));
             }
