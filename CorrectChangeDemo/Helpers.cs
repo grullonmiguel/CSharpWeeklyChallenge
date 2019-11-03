@@ -5,12 +5,6 @@ namespace CorrectChangeDemo
 {
     internal static class Helpers
     {
-
-        public enum CountryCode
-        {
-            USA
-        }
-
         public enum DenominationUSA
         {
             Penny = 01,

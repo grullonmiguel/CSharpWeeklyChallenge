@@ -1,4 +1,5 @@
-﻿using static CorrectChangeDemo.Helpers;
+﻿using CorrectChangeDemo.Enumerations;
+using static CorrectChangeDemo.Helpers;
 
 namespace CorrectChangeDemo
 {
@@ -9,7 +10,7 @@ namespace CorrectChangeDemo
 
             switch (country)
             {
-                case CountryCode.USA:
+                case CountryCode.US:
                     return new ChangeCalculatorUSA();
           
                 default:

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CorrectChangeDemo.Enumerations;
+using System;
 using static CorrectChangeDemo.Helpers;
 
 namespace CorrectChangeDemo
@@ -28,7 +29,7 @@ namespace CorrectChangeDemo
         {
             try
             {
-                IChangeCalculator calculator = Factory.GetCalculator(CountryCode.USA);
+                IChangeCalculator calculator = Factory.GetCalculator(CountryCode.US);
 
                 var results = calculator.CalculateChange(AmountOwed, AmountPaid);
 
