@@ -49,13 +49,17 @@
     <Compile Include="Factory.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="IChangeCalculator.cs" />
-    <Compile Include="Interfaces\IDenomination.cs" />
+    <Compile Include="Interfaces\IChange.cs" />
     <Compile Include="Interfaces\ITransaction.cs" />
+    <Compile Include="Models\ChangeStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\UkChange.cs" />
+    <Compile Include="Strategy\UsChange.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
