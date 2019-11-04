@@ -5,7 +5,7 @@ From the IAmTimCorey YouTube Series:
 
 https://www.iamtimcorey.com/p/c-weekly-challenges
 
-# Change Challenge Goal
+# Challenge Goal
 
 Weekly C# challenges are just that - challenges you get every week to complete some task in C#. 
 They push you to be better in an area and they help refresh your skills in areas you might not be using right now. 
