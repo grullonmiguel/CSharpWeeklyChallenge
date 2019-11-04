@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using Yomisoft.CorrectChange.Common;
 using Yomisoft.CorrectChange.Enumerations;
+using Yomisoft.CorrectChange.Interfaces;
 
 /// <summary>
 /// C# Weekly Challenges
@@ -17,16 +20,29 @@ namespace Yomisoft.CorrectChange
     /// </summary>
     public class Program
     {
+        #region Properties
 
         /// <summary>
         /// Gets the amount owed by the customer
         /// </summary>
-        private static decimal AmountOwed { get; } = .41m;
+        private static decimal AmountDue { get; } = .41m;
 
         /// <summary>
         /// Gets the amount paid by the customer
         /// </summary>
-        private static decimal AmountPaid { get; } = .49m;
+        private static decimal AmountPaid { get; } = .97m;
+
+        /// <summary>
+        /// Gets or sets a list of change
+        /// </summary>
+        private static IEnumerable<string> ChangeList { get; set; }
+
+        /// <summary>
+        /// Gets or sets a reference to a <see cref="Transaction"/> object
+        /// </summary>
+        private static ITransaction Transaction { get; set; }
+
+        #endregion
 
         /// <summary>
         /// Entry point to the application
@@ -35,20 +51,59 @@ namespace Yomisoft.CorrectChange
         {
             try
             {
-                IChangeCalculator calculator = Factory.GetCalculator(CountryCode.US);
+                // Display information on screen
+                DisplayTransaction();
 
-                var results = calculator.CalculateChange(AmountOwed, AmountPaid);
+                // Create instance of a transaction / update amounts
+                Transaction = Factory.GetTransaction(CountryCode.US);
+                Transaction.UpdateAmountDue(AmountDue);
+                Transaction.UpdateAmountPaid(AmountPaid);
 
-                results.ForEach(x => Console.WriteLine(x));
+                // Display change for US
+                DisplayChange();
+
+                // Change country code to Canada / display change
+                Transaction.UpdateDenomination(CountryCode.CA);
+                DisplayChange();
+
+                // Change country code to UK / display change
+                Transaction.UpdateDenomination(CountryCode.UK);
+                DisplayChange();
+
+                // Change country code to AU / display change
+                Transaction.UpdateDenomination(CountryCode.AU);
+                DisplayChange();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message.ToString());
+                Factory.Output(e.Message.ToString());
             }
             finally
             {
-                Console.ReadLine();
+                Factory.Pause();
             }
+        }
+
+        /// <summary>
+        /// Display transaction information on the screen
+        /// </summary>
+        private static void DisplayTransaction()
+        {
+            Factory.Output($"Amount Due: {AmountDue}");
+            Factory.Output($"Amount Paid: {AmountPaid}");
+            Factory.Output($"Change: {AmountPaid - AmountDue}");
+        }
+
+        /// <summary>
+        /// Display change information on the screen
+        /// </summary>
+        private static void DisplayChange()
+        {
+            // Call the calculate method change
+            ChangeList = Transaction.CalculateChange();
+
+            // Iterate through the list and display information
+            ChangeList.ForEach(x => Factory.Output(x));
         }
     }
 }

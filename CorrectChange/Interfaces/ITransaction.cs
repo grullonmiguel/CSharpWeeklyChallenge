@@ -5,14 +5,18 @@ namespace Yomisoft.CorrectChange.Interfaces
 {
     public interface ITransaction
     {
-        IChange Denomination { get; }
+        IChangeStrategy Denomination { get; }
 
-        decimal Owed { get; }
+        decimal Due { get; }
 
         decimal Paid { get; }
 
         IEnumerable<string> CalculateChange();
 
-        void SetDenomination(CountryCode code);
+        void UpdateAmountDue(decimal value);
+
+        void UpdateAmountPaid(decimal value);
+
+        void UpdateDenomination(CountryCode code);
     }
 }

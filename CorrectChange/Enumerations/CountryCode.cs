@@ -13,9 +13,6 @@ namespace Yomisoft.CorrectChange.Enumerations
         [Description("Canada")]
         CA,
 
-        [Description("China")]
-        CH,
-
         [Description("United Kingdom")]
         UK,
 
