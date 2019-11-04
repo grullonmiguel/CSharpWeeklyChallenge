@@ -1,19 +1,13 @@
-# Challenge Correct Change Demo
-Console app that takes amount owed and amount paid then calculate how much change a person is due.
+# C# Weekly Challenges
+Weekly challenges to help keep your C# knowledge sharp.
 
 From the IAmTimCorey YouTube Series: 
 
-https://www.youtube.com/watch?v=bX6PN6Cfe-k&t=54s
+https://www.iamtimcorey.com/p/c-weekly-challenges
 
 # Change Challenge Goal
 
-Create a Console app that takes in an amount owed and an amount paid.
-Have the app calculate how much change a person is due. Just worry
-about change under a dollar.
-
-# Bonus
-Handle varying change requests ($5 bill and less, $50 and less, etc.) and return
-the amounts for each. Do not use the console commands in your calculations.
-Return the values to Main and print them there. 
-
-Do not hard-code anything outside of Main. Handle exact change and under-payment.
+Weekly C# challenges are just that - challenges you get every week to complete some task in C#. 
+They push you to be better in an area and they help refresh your skills in areas you might not be using right now. 
+Every week a new challenge is added to this course. You do have access to past challenges as well, 
+including the ability to watch the challenge and the solution offline. 
